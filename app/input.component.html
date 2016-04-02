@@ -1,3 +1,4 @@
+<h1>{{title}}</h1>
 <div class="form-group" [class.has-error]="guess.length>1">
   <p>Guess: 
     <input class="form-control" type="text" (keyup)="sendKeyUp()" [(ngModel)]="guess">

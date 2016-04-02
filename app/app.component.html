@@ -1,5 +1,4 @@
-<h1>{{title}}</h1>
-<guess-component (keyup)="feedback=null" (guessMade)="makeGuess($event)"></guess-component>
+<guess-component [title]="title" (keyup)="feedback=null" (guessMade)="makeGuess($event)"></guess-component>
 <div class="alert" role="alert"
   [class.hidden]="!feedback" 
   [class.alert-danger]="!feedback?.success" 

@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter} from 'angular2/core';
+import {Component, Output, Input, EventEmitter} from 'angular2/core';
 import {GuessFeedback} from './models';
 
 @Component({
@@ -7,6 +7,8 @@ import {GuessFeedback} from './models';
 })
 export class GuessComponent { 
   guess: string = 'a';
+
+  @Input() title: string;
 
   @Output() keyup : EventEmitter<any> = new EventEmitter();
   @Output() guessMade: EventEmitter<string> = new EventEmitter();
