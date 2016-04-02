@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<guess-component (keyup)="feedback=null" (guessMade)="makeGuess($event)"></guess-component>
+<div class="alert" role="alert"
+  [class.hidden]="!feedback" 
+  [class.alert-danger]="!feedback?.success" 
+  [class.alert-success]="feedback?.success">
+  {{feedback?.message}}
+</div>
+
+<button class="btn btn-default" (click)="newGame()">New Game</button>
+<h3>Current Word:</h3>
+<h3>{{game.getDisplayWord()}}</h3>
+<h3>Wrong Guesses: {{game.getWrongGuesses()}}</h3>
+

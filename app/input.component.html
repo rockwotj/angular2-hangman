@@ -1,0 +1,13 @@
+<div class="form-group" [class.has-error]="guess.length>1">
+  <p>Guess: 
+    <input class="form-control" type="text" (keyup)="sendKeyUp()" [(ngModel)]="guess">
+  </p>
+</div>
+
+<p>
+  You are currently guessing: 
+  <code>{{guess}}</code> 
+  <button (click)="makeGuess()" class="btn btn-default pull-right">Make Guess</button>
+</p>
+
+
